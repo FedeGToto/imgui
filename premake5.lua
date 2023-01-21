@@ -1,10 +1,9 @@
 project "ImGui"
-{
     kind "StaticLib"
     language "C++"
 
     targetdir ("bin/" .. outputdir .. "%{prj.name}")
-    objdir {"bin-int/" .. outputdir .. "%{prj.name}"}
+    objdir ("bin-int/" .. outputdir .. "%{prj.name}")
 
     files
     {
@@ -27,4 +26,3 @@ project "ImGui"
 
     filter {"system:windows", "configurations:Release"}
         buildoptions "/MT"
-}
